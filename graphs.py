@@ -4,7 +4,7 @@ df = pd.read_csv('/home/kike/python/pythonprojects/graphs/graphsaagain/assignmen
 
 
 #Printing the first 10 columns
-#print (df.head(1))
+print (df.head(1))
 
 
 location = df[0]
@@ -48,5 +48,28 @@ subset = df[[0,2]]
 #Print out the first items on the subset to make sure we got the right callled callumns
 print(subset.head())
 
+#Pandas version for debugging
+#print (pd.__version__)
+
+#Locate the integer in the list.
+loki = df.loc[[6,9]]
+
+#locate by index. First make sure to put the index in the list.
+loki2 = df.iloc[[7]]
+
+print (loki2)
 
 
+#This block of code needs to be checked. It's suppossed to
+#iterate thorught the restaurant name given and add the column.
+rest = df.loc[df[0]== "Bryant Park", [0,2]]
+
+rest2 = rest[2].sum()
+
+
+january = df.loc[df[1] == "2018-01-1", [0,1]]
+
+
+print (january)
+
+print("Bryant park has sold", rest2, "in the year 2018")
