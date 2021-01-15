@@ -1,6 +1,6 @@
 import pandas as pd 
 
-df = pd.read_csv('/home/kike/python/pythonprojects/graphs/graphsaagain/assignment.csv',header=None, skiprows=1)
+df = pd.read_csv('/home/kike/python/pythonprojects/graphs/graphsaagain/assignment.csv',header=None, skiprows=1,sep=',')
 
 
 #Printing the first 10 columns
@@ -22,13 +22,31 @@ result = []
 #         seen.add(i)
 #         result.append(i)
 
-#list comprehensions.sum()
-[seen.add(i) for i in location if i not in seen]
+# list comprehensions
+
+# [seen.add(i) for i in location if i not in seen]
+
+# print (seen)
 
 
-print (seen)
+#prints The colum names
+print(df.columns)
+#prints out what index the file starts at, finishes and how many it skips by.
+print(df.index)
 
+# #transfer values to arrays
+# print(df.values)
 
-print (df.groupby([1]).sum())
+#how many rows and columns?
+print(df.shape)
+
+print(df.info())
+
+#Create a subset with just the location  and the number of orders
+subset = df[[0,2]]
+
+#Print out the first items on the subset to make sure we got the right callled callumns
+print(subset.head())
+
 
 
