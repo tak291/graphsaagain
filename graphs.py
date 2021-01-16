@@ -66,10 +66,10 @@ rest = df.loc[df[0]== "Bryant Park", [0,2]]
 
 rest2 = rest[2].sum()
 
+#print("Bryant park has sold", rest2, "in the year 2018")
 
-january = df.loc[df[1] == "2018-01", [0,1]]
+january = df[[0,1, 2]]
 
 
 print (january)
 
-print("Bryant park has sold", rest2, "in the year 2018")
