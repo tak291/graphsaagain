@@ -17,16 +17,16 @@ percentage = df[3]
 seen = set()
 result = []
 
-# for i in location:
-#     if i not in location:
-#         seen.add(i)
-#         result.append(i)
+for i in location:
+    if i not in location:
+        seen.add(i)
+        result.append(i)
 
-# list comprehensions
+#list comprehensions
 
-# [seen.add(i) for i in location if i not in seen]
+[seen.add(i) for i in location if i not in seen]
 
-# print (seen)
+print (seen)
 
 
 #prints The colum names
